@@ -7,7 +7,7 @@ void shift_element(int* arr, int i) {
     int k = i;
     int *p = (int *)(&sort_arr + 1) -1; // last place in the array
     int key = *(arr+i);
-    printf("*p = %d\n",*p);
+    //("*p = %d\n",*p);
     if (arr+i > p+1)
     {
         printf("out of boundries\n");
@@ -17,7 +17,7 @@ void shift_element(int* arr, int i) {
     while(j<=i)
     {
         *(arr + k) = *(arr +k -1);
-        printf("arr[i] = %d ",*(arr+k-1));
+        //printf("arr[i] = %d ",*(arr+k-1));
         //*(arr + 1) = *(arr)
         k--;
         j++;
@@ -27,13 +27,11 @@ void shift_element(int* arr, int i) {
 
 void insertion_sort(int* arr , int len) {
     int key , i = 1 , j;
-    for (int i; i < len; i++)
+    while(i<len)
     {
-        key = *(arr+i);
-        j = i-1;
-        shift_element(arr+i,i);
+
     }
-    *(arr+i) = key;
+    shift_element(arr+i,i);
 }
 
 int main() {
